@@ -1,0 +1,21 @@
+image: Visual Studio 2017
+
+platform: x64
+
+install:
+  - ps: Import-Module '.\scripts\appveyor-tool.ps1'
+  - ps: Bootstrap
+  - cmd: git submodule update --init --recursive
+  - cmd: .\scripts\msys2.cmd
+
+# environment:
+
+
+build_script:
+  - ECHO %PATH%
+  - cd OpenBLAS
+  - cp ../make/Makefile.rule .
+  - bash --login -c "make all"
+
+artifacts:
+  - path: OpenBLAS/libopenblas*.a
