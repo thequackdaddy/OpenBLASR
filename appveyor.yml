@@ -10,12 +10,16 @@ install:
 
 # environment:
 
-
 build_script:
-  - ECHO %PATH%
   - cd OpenBLAS
   - cp ../make/Makefile.rule .
-  - bash --login -c "make all"
+  - SET PATH=C:\msys64\usr\bin
+  - bash -l ../scripts/build.sh
+
+test_script:
+  - echo Running Test
+  - cd utest
+  - openblas_utest
 
 artifacts:
   - path: OpenBLAS/libopenblas*.a

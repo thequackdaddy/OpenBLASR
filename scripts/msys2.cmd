@@ -12,5 +12,6 @@ bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -Syuu --noconfirm"
+bash --login -c "pacman -S --noconfirm make"
 
 @ECHO OFF
