@@ -43,7 +43,7 @@ FC = gfortran
 # HOSTCC = gcc
 
 # If you need 32bit binary, define BINARY=32, otherwise define BINARY=64
-# BINARY=64
+BINARY=64
 
 # About threaded BLAS. It will be automatically detected if you don't
 # specify it.
