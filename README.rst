@@ -4,7 +4,10 @@ Overview
 ========
 
 This project is used to compile openblas_ on Windows so that it can be used
-as a faster BLAS alternative to the default BLAS provided with R_ on windows.
+as a faster BLAS alternative to the default BLAS provided with R_ on Windows.
+
+This is used in the companion r-openblas_ tools--an openblas optimized 64-bit R
+for Windows.
 
 Acknowledgement
 ===============
@@ -50,6 +53,7 @@ Pick the most recent build that succeeded and select the Artifact tab to
 download it.
 
 .. _openblas: http://www.openblas.net/
+.. _r-openblas: https://www.github.com/thequackdaddy/r-openblas
 .. _R: https://www.r-project.org/
 .. _Rtools: https://cran.r-project.org/bin/windows/Rtools/
 .. _MSYS2: http://www.msys2.org/
