@@ -67,7 +67,7 @@ NUM_THREADS = 64
 NO_SHARED = 1
 
 # If you don't need CBLAS interface, please comment it in.
-NO_CBLAS = 1
+# NO_CBLAS = 1
 
 # If you only want CBLAS interface without installing Fortran compiler,
 # please comment it in.
@@ -75,7 +75,7 @@ NO_CBLAS = 1
 
 # If you don't need LAPACK, please comment it in.
 # If you set NO_LAPACK=1, the library automatically sets NO_LAPACKE=1.
-NO_LAPACK = 1
+# NO_LAPACK = 1
 
 # If you don't need LAPACKE (C Interface to LAPACK), please comment it in.
 # NO_LAPACKE = 1
@@ -113,14 +113,14 @@ BUILD_LAPACK_DEPRECATED = 1
 # NO_AVX2 = 1
 
 # Don't use parallel make.
-NO_PARALLEL_MAKE = 1
+# NO_PARALLEL_MAKE = 1
 
 # Force number of make jobs. The default is the number of logical CPU of the host.
 # This is particularly useful when using distcc.
 # A negative value will disable adding a -j flag to make, allowing to use a parent
 # make -j value. This is useful to call OpenBLAS make from an other project
 # makefile
-# MAKE_NB_JOBS = 4
+MAKE_NB_JOBS = 4
 
 # If you would like to know minute performance report of GotoBLAS.
 # FUNCTION_PROFILE = 1
