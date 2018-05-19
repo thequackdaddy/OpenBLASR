@@ -8,11 +8,27 @@ install:
   - cmd: git submodule update --init --recursive
   - cmd: .\scripts\msys2.cmd
 
-# environment:
+environment:
+  global:
+    VERSION: 0.2.20
+    FC: gfortran
+    BINARY: 64
+    USE_THREAD: 1
+    NUM_THREADS: 64
+    NO_SHARED: 1
+    BUILD_LAPACK_DEPRECATED: 1
+    MAKE_NB_JOBS: 4
+    GEMM_MULTITHREAD_THRESHOLD: 4
+    COMMON_PROF: -pg
+
+  matrix:
+    - TARGET: HASWELL
+    - TARGET: SANDYBRIDGE
+    - TARGET: NEHALEM
 
 build_script:
   - cd OpenBLAS
-  - cp ../make/Makefile.rule .
+  # - cp ../make/Makefile.rule .
   - SET PATH=C:\msys64\usr\bin
   - bash ..\scripts\build.sh
 

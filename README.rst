@@ -32,22 +32,26 @@ Windows buils.
 
 Strategy:
 
-First, a ``Makefile.rule`` is created with some rather generic settings. I
-personally am runnign this on an Intel Core i7 processor, so I used the
-``HASWELL`` target. If you are using a different processor, another target
-is necessary.
+GCC can be configured either through a ``Makefile`` or using environment
+variables. In this example, I'll use environment variables to avoid having
+to copy files around. We can configured the environment variables using
+an ``appveyor.yml`` file.
 
 GNU ``make`` needs to be run from within a ``bash`` shell environment. However,
 it is **very** important to use the ``gcc`` and ``gfortran`` that are shipped
 with Rtools. Typically in Windows GUI this could be accomplished by opening an
 ``MSYS2`` shell, running
 ``export PATH=\C\Rtools\bin:\C\Rtools\mingw_64\bin:$PATH``, then ``make all``.
-This project accomplish the same thing using a ``bash`` script instead.
+This project accomplish the same thing using a ``bash`` script.
 
 Once this is completed, the compiled library is avaiable as a downloadable
 Artifact from Appveyor. Go to the project's Appveyor site:
 
 https://ci.appveyor.com/project/thequackdaddy/openblasr
+
+Currently, I we are only building drivers for Intel's Haswell, Sandybridge, and
+Nehalem architectures. Others could be easily added by just adding to the
+appveyor.yml file.
 
 Pick the most recent build that succeeded and select the Artifact tab to
 download it.
