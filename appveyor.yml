@@ -39,3 +39,16 @@ test_script:
 
 artifacts:
   - path: OpenBLAS/libopenblas*.a
+
+deploy:
+  release: OpenBLASR-$(target)-v$(appveyor_build_version)
+  description: 'This is R compiled with the Rtools gcc, for R compatibility'
+  provider: GitHub
+  auth_token:
+    secure: 6VduGFAfk0LDLzJDnzCakW7vldMxkkaw4OHCYkFqyecDV9sKE+MdEP5Go4zpmt3c
+  artifact: OpenBLAS/libopenblas*.a
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only

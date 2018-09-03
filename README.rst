@@ -56,6 +56,21 @@ appveyor.yml file.
 Pick the most recent build that succeeded and select the Artifact tab to
 download it.
 
+Updating
+========
+
+Updating to newer versions of OpenBLAS should be straightforward. In the
+the command line...
+
+.. code-block::
+
+   cd OpenBLASR
+   git checkout tags/<version number>
+   cd ..
+   git add OpenBLAS
+   git commit -m "Updated OpenBLAS"
+   git push origin <branchname>
+
 .. _openblas: http://www.openblas.net/
 .. _r-openblas: https://www.github.com/thequackdaddy/r-openblas
 .. _R: https://www.r-project.org/
