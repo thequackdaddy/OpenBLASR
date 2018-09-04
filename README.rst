@@ -63,5 +63,5 @@ download it.
 .. _MSYS2: http://www.msys2.org/
 .. _Appveyor: http://appveyor.com/
 .. _`blog post`: https://www.avrahamadler.com/r-tips/build-openblas-for-windows-r64/
-.. |Appveyor Build Status| image:: https://ci.appveyor.com/api/projects/status/9xm30c47u8hp894h?svg=true
+.. |Appveyor Build Status| image:: https://ci.appveyor.com/api/projects/status/9xm30c47u8hp894h/branch/master?svg=true
    :target: https://ci.appveyor.com/project/thequackdaddy/openblasr/branch/master
