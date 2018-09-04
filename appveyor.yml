@@ -11,6 +11,7 @@ install:
 environment:
   global:
     # VERSION: 0.2.20
+    OSNAME: WINNT
     FC: gfortran
     BINARY: 64
     USE_THREAD: 1
