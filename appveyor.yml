@@ -6,7 +6,7 @@ install:
   - ps: Import-Module '.\scripts\appveyor-tool.ps1'
   - ps: Bootstrap
   - cmd: git submodule update --init --recursive
-  - cmd: .\scripts\msys2.cmd
+  # - cmd: .\scripts\msys2.cmd
 
 environment:
   global:
@@ -33,8 +33,10 @@ environment:
 build_script:
   - cd OpenBLAS
   # - cp ../make/Makefile.rule .
-  - SET PATH=C:\msys64\usr\bin
-  - bash ..\scripts\build.sh
+  # - SET PATH=C:\msys64\usr\bin
+  # - bash ..\scripts\build.sh
+  - gcc --version
+  - make all
 
 test_script:
   - echo Running Test
