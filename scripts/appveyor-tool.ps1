@@ -61,6 +61,8 @@ Function InstallRtools {
   }
   $env:PATH = $RtoolsDrive + '\Rtools\bin;' + $RtoolsDrive + '\Rtools\mingw_64\bin;' + $env:PATH
   $env:BINPREF=$RtoolsDrive + '/Rtools/mingw_64/bin/'
+  $env:LIBRARY_PATH=$RtoolsDrive + '/Rtools/bin'
+  $env:LD_LIBRARY_PATH=$RtoolsDrive + '/Rtools/bin'
 }
 
 Function Bootstrap {

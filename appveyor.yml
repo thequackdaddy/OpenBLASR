@@ -19,7 +19,6 @@ environment:
     NO_SHARED: 1
     NO_CBLAS: 1
     NO_LAPACK: 1
-    NO_PARALLEL_MAKE: 1
 
     # MAKE_NB_JOBS: 4
     GEMM_MULTITHREAD_THRESHOLD: 4
