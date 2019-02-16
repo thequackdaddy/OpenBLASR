@@ -8,8 +8,13 @@ cd /
 
 ls -lash
 
-cd ~
+cd /bin
+ls -lash
 
+cd /usr/bin
+ls -lash
+
+cd /c/projects/openblasr/OpenBLAS
 pwd
 
 export PATH=/mingw64/bin:/mingw32/bin:/usr/bin:/bin

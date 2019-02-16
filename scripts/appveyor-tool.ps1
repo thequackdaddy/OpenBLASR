@@ -77,5 +77,5 @@ Function Bootstrap {
   tzutil /s "GMT Standard Time"
   tzutil /g
 
-InstallRtools
+  # InstallRtools
 }
