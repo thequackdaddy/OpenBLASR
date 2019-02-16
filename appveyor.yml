@@ -11,7 +11,8 @@ install:
 environment:
   global:
     # VERSION: 0.2.20
-    FC: gfortran
+    CC: x86_64-pc-msys-gcc
+    FC: x86_64-pc-msys-gfortran
     BINARY: 64
     USE_THREAD: 1
     NUM_THREADS: 64
