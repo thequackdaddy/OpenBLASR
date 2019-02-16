@@ -40,4 +40,15 @@ test_script:
   - openblas_utest
 
 artifacts:
-  - path: OpenBLAS/libopenblas*.a
+  - path: OpenBLAS/*openblas*.a
+
+
+deploy:
+  description: 'OpenBLAS compiled for R'
+  provider: GitHub
+  auth_token:
+    secure: 6VduGFAfk0LDLzJDnzCakW7vldMxkkaw4OHCYkFqyecDV9sKE+MdEP5Go4zpmt3c
+  draft: false
+  prerelease: false
+  on:
+    appveyor_repo_tag: true        # deploy on tag push only
