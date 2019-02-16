@@ -13,5 +13,5 @@ bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -Syuu --noconfirm"
 bash --login -c "pacman -S --noconfirm make"
-bash --login -c "pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain git subversion mercurial mingw-w64-i686-cmake mingw-w64-x86_64-cmake"
+bash --login -c "pacman -S --needed --noconfirm base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain git subversion mercurial mingw-w64-i686-cmake mingw-w64-x86_64-cmake"
 @ECHO OFF
