@@ -2,6 +2,18 @@
 
 echo $PATH
 
+pwd
+
+cd /
+
+ls -lash
+
+cd ~
+
+pwd
+
+export PATH=/mingw64/bin:/mingw32/bin:/usr/bin:/bin
+
 # export PATH=/C/Rtools/mingw_64/bin:/C/Rtools/bin:/usr/bin:/bin
 
 echo $PATH
