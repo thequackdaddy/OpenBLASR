@@ -48,7 +48,7 @@ test_script:
   - openblas_utest
 
 artifacts:
-  - path: OpenBLAS/*openblas*.a
+  - path: OpenBLAS/build/lib/*openblas*.a
 
 
 deploy:
