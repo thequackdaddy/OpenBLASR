@@ -3,7 +3,7 @@ image: Visual Studio 2017
 platform: x64
 
 install:
-  # - ps: Import-Module '.\scripts\appveyor-tool.ps1'
+  - ps: Import-Module '.\scripts\appveyor-tool.ps1'
   # - ps: Bootstrap
   # - cmd: git submodule update --init --recursive
   # - cmd: .\scripts\msys2.cmd
@@ -16,7 +16,7 @@ environment:
     # FC: gfortran
     # BINARY: 64
     # USE_THREAD: 1
-    # NUM_THREADS: 64
+    NUM_THREADS: 64
     # NO_SHARED: 1
     # NO_CBLAS: 1
     # NO_LAPACK: 1
@@ -24,6 +24,7 @@ environment:
     # MAKE_NB_JOBS: 4
     # GEMM_MULTITHREAD_THRESHOLD: 4
     # COMMON_PROF: -pg
+    #
 
 
   matrix:
