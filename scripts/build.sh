@@ -17,6 +17,12 @@ ls -lash
 cd /usr/bin
 ls -lash
 
+cd /mingw64
+ls -lash
+
+cd /mingw32
+ls -lash
+
 cd /c/projects/openblasr/OpenBLAS
 pwd
 
