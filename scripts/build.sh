@@ -11,6 +11,9 @@ ls -lash
 cd /bin
 ls -lash
 
+cd /usr
+ls -lash
+
 cd /usr/bin
 ls -lash
 
@@ -20,8 +23,9 @@ pwd
 alias gcc=x86_64-pc-msys-gcc
 alias gfortran=x86_64-pc-msys-gfortran
 alias x86_64-pc-msys-ar=x86_64-pc-msys-gcc-ar
+alias ar=x86_64-pc-msys-gcc-ar
 
-export PATH=/mingw64/bin:/mingw32/bin:/usr/bin:/bin
+export PATH=/usr/bin:/bin
 
 # export PATH=/C/Rtools/mingw_64/bin:/C/Rtools/bin:/usr/bin:/bin
 
