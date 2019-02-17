@@ -37,6 +37,7 @@ build_script:
   - mkdir build
   - cd build
   - SET PATH=C:\Miniconda36-x64;C:\Miniconda36-x64\Scripts;%PATH%
+  - conda config --set always_yes yes --set changeps1 no
   - conda update conda
   - conda create -n opb python=3.6
   - activate opb
