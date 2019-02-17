@@ -36,18 +36,7 @@ build_script:
   - cd OpenBLAS
   - mkdir build
   - cd build
-  - SET PATH=C:\Miniconda36-x64;C:\Miniconda36-x64\Scripts;%PATH%
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update conda
-  - conda create -n opb python=3.6
-  - activate opb
-  - conda config --add channels conda-forge
-  - conda install -y cmake flang clangdev perl libflang
-  - conda install -y -c isuruf kitware-ninja
-  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-  - set "LIB=%CONDA_INSTALL_LOCN%\Library\lib;%LIB%"
-  - set "CPATH=%CONDA_INSTALL_LOCN%\Library\include;%CPATH%
-  - cmake .. -G "Ninja" -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_COMPILER=clang-cl -DCMAKE_Fortran_COMPILER=flang -DBUILD_WITHOUT_LAPACK=yes -DNOFORTRAN=1 -DDYNAMIC_ARCH=OFF -DTARGET=%TARGET% -DCMAKE_BUILD_TYPE=Release
+  - cmake -G "Visual Studio 15 2017 Win64" -DNUM_THREADS=64 ..
   - cmake --build .
   # - cp ../make/Makefile.rule .
   # - SET PATH=C:\msys64\usr\bin
